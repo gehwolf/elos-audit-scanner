@@ -1,0 +1,17 @@
+{
+  "root": {
+    "elos": {
+      "Scanner": {
+        "Plugins": {
+          "audit": {
+            "File": "scanner_audit.so",
+            "Run": "always",
+            "Config": {
+              "auditd": true
+            }
+          }
+        }
+      }
+    }
+  }
+}
