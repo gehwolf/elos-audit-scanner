@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 
 set(PLUGIN_VERSION_MAJOR 0)
 set(PLUGIN_VERSION_MINOR 1)
-set(PLUGIN_VERSION_MICRO 0)
+set(PLUGIN_VERSION_MICRO 1)
 set(PLUGIN_VERSION
     ${PLUGIN_VERSION_MAJOR}.${PLUGIN_VERSION_MINOR}.${PLUGIN_VERSION_MICRO})
 
@@ -50,10 +50,3 @@ install(
   DESTINATION
     ${ELOSD_SCANNER_CONFIG_PATH}
 )
-
-add_executable(netlink_test src/netlink_test.c src/audit.c)
-target_compile_options(netlink_test
-    PRIVATE -g -Wall -Wextra -pedantic -fsanitize=address
-)
-target_link_libraries(netlink_test asan)
-
